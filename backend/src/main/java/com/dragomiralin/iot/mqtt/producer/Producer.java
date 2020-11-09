@@ -1,6 +1,6 @@
-package com.dragomiralin.iot.mqtt.Producer;
+package com.dragomiralin.iot.mqtt.producer;
 
-import com.dragomiralin.iot.mqtt.Config.MqttConfig;
+import com.dragomiralin.iot.mqtt.config.MqttConfig;
 import org.eclipse.paho.client.mqttv3.MqttClient;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;

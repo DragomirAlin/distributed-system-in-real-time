@@ -1,4 +1,4 @@
-package com.dragomiralin.iot.mqtt.Config;
+package com.dragomiralin.iot.mqtt.config;
 
 import org.eclipse.paho.client.mqttv3.IMqttClient;
 import org.eclipse.paho.client.mqttv3.MqttClient;
@@ -32,6 +32,10 @@ public class MqttConfig {
         }
 
         return instance;
+    }
+
+    private MqttConfig() {
+
     }
 
 }
