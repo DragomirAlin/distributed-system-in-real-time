@@ -15,6 +15,7 @@ public class PublishService {
         MqttMessage mqttMessage = new MqttMessage(publishObject.getMessage().getBytes());
         mqttMessage.setQos(publishObject.getQos());
         mqttMessage.setRetained(publishObject.getRetained());
+        
 
         MqttConfig.getInstance().publish(publishObject.getTopic(), mqttMessage);
     }
