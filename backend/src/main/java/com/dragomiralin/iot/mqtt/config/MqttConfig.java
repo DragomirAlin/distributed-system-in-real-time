@@ -10,11 +10,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class MqttConfig {
 
-    @Value("${spring.config.mosquitto.broker.username}")
-    private static String USERNAME;
-    @Value("${spring.config.mosquitto.broker.password}")
-    private static String PASSWORD = "32dfcsx3rf";
-
     private static final String MQTT_PUBLISHER_ID = "spring-server";
     private static final String MQTT_SERVER_ADDRES= "tcp://127.0.0.1:1883";
     private static IMqttClient instance;
@@ -26,15 +21,10 @@ public class MqttConfig {
             }
 
             MqttConnectOptions options = new MqttConnectOptions();
-            options.setUserName(USERNAME);
-            options.setPassword(PASSWORD.toCharArray());
             options.setAutomaticReconnect(true);
             options.setCleanSession(true);
             options.setConnectionTimeout(10);
             options.setMqttVersion(MqttConnectOptions.MQTT_VERSION_3_1);
-
-
-
 
             if (!instance.isConnected()) {
                 instance.connect(options);
