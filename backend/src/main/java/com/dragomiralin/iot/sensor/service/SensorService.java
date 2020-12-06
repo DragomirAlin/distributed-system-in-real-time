@@ -5,6 +5,7 @@ import org.eclipse.paho.client.mqttv3.MqttException;
 
 public interface SensorService {
 
-    void setTopic(String nameTopic) throws MqttException;
+    void subscribeTopic(String nameTopic) throws MqttException;
+    void unsubscribeTopic(String nameTopic) throws MqttException;
     Sensor getData();
 }

@@ -17,8 +17,13 @@ public class SensorServiceImpl implements SensorService {
     private final SubscribeService subscribeService;
 
     @Override
-    public void setTopic(String nameTopic) throws MqttException {
+    public void subscribeTopic(String nameTopic) throws MqttException {
         subscribeService.subscribeChannel(nameTopic);
+    }
+
+    @Override
+    public void unsubscribeTopic(String nameTopic) throws MqttException {
+        subscribeService.unsubscribeChannel(nameTopic);
     }
 
     @Override
