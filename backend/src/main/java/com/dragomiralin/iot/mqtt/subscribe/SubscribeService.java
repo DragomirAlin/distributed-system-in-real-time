@@ -9,13 +9,19 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 public class SubscribeService {
+    private String payload;
 
     public void subscribeChannel(String topicName) throws MqttException {
         MqttConfig.getInstance().subscribeWithResponse(topicName, (s, mqttMessage) -> {
             Subscribe mqttSubscribeModel = new Subscribe();
             mqttSubscribeModel.setMessage(new String(mqttMessage.getPayload()));
+            this.payload = mqttSubscribeModel.getMessage();
             log.info("Message from MQTT: " +mqttSubscribeModel.getMessage() + ", topic: " + topicName);
         });
+    }
+
+    public String getPayload(){
+        return this.payload;
     }
 
     public void unsubscribeChannel(String topicName) throws MqttException {

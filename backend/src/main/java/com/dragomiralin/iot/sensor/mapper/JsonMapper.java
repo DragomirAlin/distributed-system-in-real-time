@@ -12,7 +12,7 @@ import java.io.IOException;
 @Component
 public class JsonMapper {
 
-    private static Sensor fromJSONObject(String jsonValue) {
+    public static Sensor fromJSONObject(String jsonValue) {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.configure(MapperFeature.ACCEPT_CASE_INSENSITIVE_PROPERTIES, true);
         Sensor sensor = null;
