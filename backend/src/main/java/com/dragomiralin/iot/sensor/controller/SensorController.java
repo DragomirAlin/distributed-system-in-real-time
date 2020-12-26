@@ -1,13 +1,9 @@
 package com.dragomiralin.iot.sensor.controller;
 
-import com.dragomiralin.iot.mqtt.model.Publish;
-import com.dragomiralin.iot.mqtt.publish.PublishService;
-import com.dragomiralin.iot.mqtt.subscribe.SubscribeService;
 import com.dragomiralin.iot.sensor.domain.Sensor;
 import com.dragomiralin.iot.sensor.service.SensorService;
 import lombok.RequiredArgsConstructor;
 import org.eclipse.paho.client.mqttv3.MqttException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
