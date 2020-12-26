@@ -7,10 +7,10 @@ import org.eclipse.paho.client.mqttv3.MqttException;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/api/mqtt")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
+@RequestMapping(value = "/mqtt")
 @RequiredArgsConstructor
 public class SensorController {
-
     private final SensorService sensorService;
 
     @PostMapping(value = "/subscribe/{topicName}")
