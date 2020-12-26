@@ -1,0 +1,46 @@
+<div class="card m-auto">
+    <div class="row justify-content-center">
+        <div class="col-6">
+
+        </div>
+    </div>
+</div>
+
+
+<div class="row ml-5">
+    <div class="col-sm-3">
+
+    </div>
+    <div class="col-sm-2">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Subscribe topic</h5>
+                <form #f="ngForm" (ngSubmit)="subscribeTopic(f.value)" class="form form-register">
+                    <div class="form-field">
+                        <input name="topic" id="topic" type="text" class="form-input" placeholder="Topic name"
+                               ngModel required>
+                    </div>
+                    <div class="p-2 m-auto">
+                        <input type="submit" class="btn btn-primary" value="Subscribe">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-2">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Unsubscribe topic</h5>
+                <form #f2="ngForm" (ngSubmit)="unsubscribeTopic(f2.value)" class="form form-register">
+                    <div class="form-field">
+                        <input name="utopic" id="utopic" type="text" class="form-input" placeholder="Topic name"
+                               ngModel required>
+                    </div>
+                    <div class="p-2 m-auto">
+                        <input type="submit" class="btn btn-primary" value="Unsubscribe">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
