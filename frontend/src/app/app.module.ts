@@ -10,6 +10,9 @@ import {CommonModule} from '@angular/common';
 import { MqttComponent } from './mqtt/mqtt.component';
 import {FormsModule} from '@angular/forms';
 import { TopicsComponent } from './topics/topics.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatTableModule} from '@angular/material/table';
 
 
 @NgModule({
@@ -25,7 +28,10 @@ import { TopicsComponent } from './topics/topics.component';
         ApiModule,
         HttpClientModule,
         CommonModule,
-        FormsModule
+        FormsModule,
+        BrowserAnimationsModule,
+        MatPaginatorModule,
+        MatTableModule
     ],
     providers: [],
     bootstrap: [AppComponent]
