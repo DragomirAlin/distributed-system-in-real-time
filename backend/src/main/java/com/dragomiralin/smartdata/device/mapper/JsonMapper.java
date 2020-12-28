@@ -14,6 +14,10 @@ import java.io.IOException;
 public class JsonMapper {
 
     public static Device fromJSONObject(String jsonValue) {
+        if(null == jsonValue){
+            return new Device();
+        }
+
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.configure(MapperFeature.ACCEPT_CASE_INSENSITIVE_PROPERTIES, true);
         Device device = null;

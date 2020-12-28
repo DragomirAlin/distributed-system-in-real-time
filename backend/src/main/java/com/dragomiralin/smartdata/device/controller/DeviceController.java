@@ -28,7 +28,7 @@ public class DeviceController {
         deviceService.unsubscribeTopic(topicName);
     }
 
-    @GetMapping(value = "/measurements/{topicName}")
+    @GetMapping(value = "/measurements")
     public Device getPayload() {
         return deviceService.getPayload();
     }

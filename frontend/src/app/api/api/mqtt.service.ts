@@ -62,14 +62,10 @@ export class MqttService {
      * @param observe set whether or not to return the data Observable as the body, response or events. defaults to returning the body.
      * @param reportProgress flag to report request and response progress.
      */
-    public getData(topicName: string, observe?: 'body', reportProgress?: boolean): Observable<Sensor>;
-    public getData(topicName: string, observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<Sensor>>;
-    public getData(topicName: string, observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<Sensor>>;
-    public getData(topicName: string, observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
-
-        if (topicName === null || topicName === undefined) {
-            throw new Error('Required parameter topicName was null or undefined when calling getData.');
-        }
+    public getData(observe?: 'body', reportProgress?: boolean): Observable<Sensor>;
+    public getData(observe?: 'response', reportProgress?: boolean): Observable<HttpResponse<Sensor>>;
+    public getData(observe?: 'events', reportProgress?: boolean): Observable<HttpEvent<Sensor>>;
+    public getData(observe: any = 'body', reportProgress: boolean = false ): Observable<any> {
 
         let headers = this.defaultHeaders;
 
@@ -86,7 +82,7 @@ export class MqttService {
         const consumes: string[] = [
         ];
 
-        return this.httpClient.request<Sensor>('get',`${this.basePath}/mqtt/measurements/${encodeURIComponent(String(topicName))}`,
+        return this.httpClient.request<Sensor>('get',`${this.basePath}/mqtt/measurements`,
             {
                 withCredentials: this.configuration.withCredentials,
                 headers: headers,

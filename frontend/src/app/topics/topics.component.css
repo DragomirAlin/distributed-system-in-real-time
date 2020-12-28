@@ -1,5 +1,6 @@
-table{
-    width: 100%;
+.wrapper-table {
     margin-left: 25em;
+    margin-bottom: 5em;
+    margin-right: auto;
 }
 
