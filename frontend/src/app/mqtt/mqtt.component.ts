@@ -16,9 +16,11 @@ export class MqttComponent implements OnInit {
 
   subscribeTopic(data: { topic: string; }){
     this.mqttService.subscribeChannel(data.topic).subscribe();
+    location.reload();
   }
 
   unsubscribeTopic(unsub: { utopic: string; }){
     this.mqttService.unsubscribeChannel(unsub.utopic).subscribe();
+    location.reload();
   }
 }

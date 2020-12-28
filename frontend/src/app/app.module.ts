@@ -9,13 +9,15 @@ import {HttpClientModule} from '@angular/common/http';
 import {CommonModule} from '@angular/common';
 import { MqttComponent } from './mqtt/mqtt.component';
 import {FormsModule} from '@angular/forms';
+import { TopicsComponent } from './topics/topics.component';
 
 
 @NgModule({
     declarations: [
         AppComponent,
         DashboardComponent,
-        MqttComponent
+        MqttComponent,
+        TopicsComponent
     ],
     imports: [
         BrowserModule,
