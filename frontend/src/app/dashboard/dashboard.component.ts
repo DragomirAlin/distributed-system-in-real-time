@@ -13,12 +13,12 @@ export class DashboardComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        // window.setInterval(() => {
-        //     this.mqttService.getData().subscribe((response) => {
-        //         this.temperature = response.temperature;
-        //         this.humidity = response.humidity;
-        //     });
-        // }, 1000);
+        window.setInterval(() => {
+            this.mqttService.getData().subscribe((response) => {
+                this.temperature = response.temperature;
+                this.humidity = response.humidity;
+            });
+        }, 1000);
     }
 
 }
