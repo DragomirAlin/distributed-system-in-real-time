@@ -13,6 +13,8 @@ import { TopicsComponent } from './topics/topics.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTableModule} from '@angular/material/table';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { ChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -31,7 +33,10 @@ import {MatTableModule} from '@angular/material/table';
         FormsModule,
         BrowserAnimationsModule,
         MatPaginatorModule,
-        MatTableModule
+        MatTableModule,
+        NgxChartsModule,
+        ChartsModule
+
     ],
     providers: [],
     bootstrap: [AppComponent]

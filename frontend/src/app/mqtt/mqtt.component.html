@@ -13,14 +13,14 @@
     </div>
     <div class="col-sm-2">
         <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Subscribe topic</h5>
+            <div class="card-body m-auto">
+                <h2 class="card-title text-center">Add source</h2>
                 <form #f="ngForm" (ngSubmit)="subscribeTopic(f.value)" class="form form-register">
                     <div class="form-field">
                         <input name="topic" id="topic" type="text" class="form-input" placeholder="Topic name"
                                ngModel required>
                     </div>
-                    <div class="p-2 m-auto">
+                    <div class="ms-3 p-2 m-auto">
                         <input type="submit" class="btn btn-primary" value="Subscribe">
                     </div>
                 </form>
@@ -29,14 +29,14 @@
     </div>
     <div class="col-sm-2">
         <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Unsubscribe topic</h5>
+            <div class="card-body m-auto">
+                <h2 class="card-title text-center">Delete source</h2>
                 <form #f2="ngForm" (ngSubmit)="unsubscribeTopic(f2.value)" class="form form-register">
                     <div class="form-field">
                         <input name="utopic" id="utopic" type="text" class="form-input" placeholder="Topic name"
                                ngModel required>
                     </div>
-                    <div class="p-2 m-auto">
+                    <div class="ms-3 p-2 m-auto">
                         <input type="submit" class="btn btn-primary" value="Unsubscribe">
                     </div>
                 </form>

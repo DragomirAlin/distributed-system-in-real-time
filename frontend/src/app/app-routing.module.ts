@@ -6,7 +6,7 @@ import { TopicsComponent } from './topics/topics.component';
 
 const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
-  {path: 'mqtt', component: MqttComponent},
+  {path: 'source', component: MqttComponent},
   {path: 'topic', component: TopicsComponent}
 ];
 
