@@ -18,7 +18,8 @@ size_t measureJsonPretty(const JsonDocument& doc);
 
 WiFiClient espClient;
 PubSubClient client(espClient);
- 
+DHT dht3 = DHT(D1, DHTTYPE);
+
 void setup() {
   Serial.begin(115200);
   dht3.begin();
