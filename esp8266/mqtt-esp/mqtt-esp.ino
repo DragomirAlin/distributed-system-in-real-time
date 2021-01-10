@@ -9,8 +9,8 @@
 #define DHTPIN D3
 #define DHTTYPE DHT11
  
-const char* ssid = "DIGI_9c8588"; // Enter your WiFi name
-const char* password =  "1769140d"; // Enter WiFi password
+const char* ssid = ""; // Enter your WiFi name
+const char* password =  ""; // Enter WiFi password
 const char* mqttServer = "192.168.1.4";
 const int mqttPort = 1883;
 String message = "";
