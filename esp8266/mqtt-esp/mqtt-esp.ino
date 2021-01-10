@@ -64,7 +64,7 @@ void Acquisition( void *pvParameters )
   vTaskDelete ( NULL );
 }
 
-*/
+
 void MQTTkeepalive( void *pvParameters )
 {
   MQTTclient.setKeepAlive( 90 ); 
